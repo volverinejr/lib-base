@@ -1,6 +1,6 @@
 package br.com.volverinejr.lib_base.model;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
@@ -37,7 +37,7 @@ public class EntityBase {
 	@Column(name = "created_date", nullable = true, updatable = false)
 	@CreatedDate
 	@JsonIgnore
-	private Date createdDate;
+	private LocalDateTime createdDate;
 
 	@Column(name = "last_modified_by", nullable = true)
 	@LastModifiedBy
@@ -47,7 +47,7 @@ public class EntityBase {
 	@Column(name = "last_modified_date", nullable = true)
 	@LastModifiedDate
 	@JsonIgnore
-	private Date lastModifiedDate;
+	private LocalDateTime lastModifiedDate;
 	// -------AUDITORIA
 	
 
